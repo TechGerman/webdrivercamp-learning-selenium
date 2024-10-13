@@ -18,7 +18,9 @@ search.send_keys('women watch')
 
 search_button = driver.find_element(By.ID, 'gh-btn').click()
 
-results_heading = driver.find_element(By.XPATH, '//h1[@class="srp-controls__count-heading"]')
+results_heading = driver.find_element(
+    By.XPATH, '//h1[@class="srp-controls__count-heading"]'
+)
 search_word = 'results for women watch'
 if search_word in results_heading.text:
     print(f'Header contains "results for women watch"')
